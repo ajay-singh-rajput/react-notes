@@ -1,0 +1,87 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+////////----- Day 1 -----\\\\\\\\
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+let a = 5;
+export default a;
+// default export only export one veriable
+
+
+// to access the export in other element
+import a from('path')
+--------------------------------------------------------------------------------
+let b;
+let c;
+export const b;
+export const c;
+// const export:- 
+// to access the export in other element
+import {b, c} from('path')
+// we have to use same name to eccess element
+// to export more than one varaible we use const export
+--------------------------------------------------------------------------------
+rafce
+
+es7+ react/reduc/
+
+--------------------------------------------------------------------------------
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+////////----- Day 2 -----\\\\\\\\
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+1. if we use div in return it will also see in realdom. so hide that thing there is two way first use fragment that provide by react or use empty close open and close tag of html
+
+import {fragment} from react
+
+//
+return (
+    <fragment>
+    -- other code --
+    </fragment>
+)
+//
+
+
+2. to change update in realdom and virtual dom we user useState to create varaible to let know react what to change in doms
+import {useState} from react;
+
+3. we can not pass paramenter function direct in react onlick or kind of method in react so we warapper it in another non paramenter function to use in onlick with paramiter
+
+we use fat arraow function in react all time untile unless we need 
+
+
+--------------------------------------------------------------------------------
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+////////----- Day 3 -----\\\\\\\\
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. two way binding:- to save user/clint data in view/browser and change with react we first tell d react first that user click something then react save in usestate and then tranfer to view/browser.
+this method only use for forms
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+////////----- Day 4 -----\\\\\\\\
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+to intall tailwind in react that created using vite 
+1. go to tailwind css website 
+2. then click on get start button
+3. under the installation click on option framworks guide
+4. click on vite and follow the instruction of 'using react'
+
+
+--- react ----
+import index.css file in main.jxs
+now search the properties and apply using class in that element
+
+jsx file of react can render array by default but it can not render object and throw error. so we can not direct pass json or object data to jsx 
+
+so we use map method insted of forEach loop to render data of json 
+
+when we use react throw one error that every item should have uniqe key properties so react know that are diffrent and not copy of each other so we pass index from map aswell so react know the diffrence in them  
+
+we can not push data in useState by using push method so we create another noraml array and copy that array in new array using [...oldArray] this  called spread operator and them we push new data to new array and then pass threw useState and replace old array with new array
+
+
