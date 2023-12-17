@@ -85,3 +85,29 @@ when we use react throw one error that every item should have uniqe key properti
 we can not push data in useState by using push method so we create another noraml array and copy that array in new array using [...oldArray] this  called spread operator and them we push new data to new array and then pass threw useState and replace old array with new array
 
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+////////----- Day 5 -----\\\\\\\\
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+today we use localstorage to store data that not going to delete until you delete it.
+
+open in browser
+press clt + shift + i to open concole window
+then got to application section under that you will find localstorage
+
+localStorage.setItem('key', 'here pass the data');
+localStorage.getItem('key')// to get user pass the key
+
+we use react tostify to give alert msg 
+npm install --save react-toastify
+
+if brake properties/atribute, there is problem to store data in react because data can be tranfer from parent to child 
+
+create components folder inside src folder 
+create two files
+1. Create.jsx 
+2. Show.jsx 
+
+import boiler plat and the paste code according create and show data in difrent file according there name 
+
+to share comman data in both created file we pass data as argument and access as parameter in those file
