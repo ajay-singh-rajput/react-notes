@@ -12,11 +12,13 @@ const deleteHandler = (ind)=>{
     localStorage.setItem('users', JSON.stringify(user));
     toast.warn('user deleted successfully')
    }
+
+   const newcss = "flex justify-between p-2 my-2 bg-slate-300 rounded-sm w-[300px]"
    
   return (
     <ol className="list-disc">
       {users.map((user, index)=>{
-        return <li key={index} className="flex justify-between p-2 my-2 bg-slate-300 rounded-sm w-[300px]"><p>{user.username}</p> <span className="flex gap-2"><i className="ri-pencil-line"></i><i className="ri-delete-bin-line" onClick={deleteHandler}></i></span></li>
+        return <li key={index} className={newcss}><p>{user.username}</p> <span className="flex gap-2"><i className="ri-pencil-line"></i><i className="ri-delete-bin-line" onClick={deleteHandler}></i></span></li>
       }).reverse()}
       
     </ol>

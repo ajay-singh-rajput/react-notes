@@ -111,3 +111,49 @@ create two files
 import boiler plat and the paste code according create and show data in difrent file according there name 
 
 to share comman data in both created file we pass data as argument and access as parameter in those file
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+////////----- Day 6 -----\\\\\\\\
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+there is another way to impliment class
+
+1. inline
+2. internal
+3. extranal 
+and more
+
+1. Inline :- fisrt is to add style tage and apply css properties in writing in camelcase style. we have use two curly brackets to apply css properties 
+Ex:- <h1 style={{backgroundColor: "red", color:"yellow"}}></h1>
+
+2. Internal :- to apply internal css we create a object that contain css properties and pass in style tag of that eliment that we want to apply css
+Ex:- 
+--other code
+  const App = ()=>{
+    --other code
+    const internalCss = {
+        backgroundColor :"black",
+        color:"white"
+    }
+    return(
+        <>
+        <h1 style={internalCss}>ere come ur text</h1>
+        </>
+    )
+  }
+
+3. Extranal :- there is problem with extranal css if we apply that css this will effect all the components that present(child, grand-child, parent). this apply globly
+
+that why we use Name.module.css to import seprate css style
+
+//---------
+ to create route in react we have to install 
+
+ npm i react-router-dom
+
+ and then in main.jsx file. wrapped element in BrowserRouter element 
+ for going in diffrent route we use <LINK to="/"> </LINK> tag insted of <a></a> tag
+
+ and we add <Router></Router> tag and define that route should we open in that route in <Rout path='/' element={<PageTag/>}/> tag
