@@ -32,7 +32,7 @@ es7+ react/reduce/
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-1. if we use div in return it will also see in realdom. so hide that thing there is two way first use fragment that provide by react or use empty close open and close tag of html
+1. if we use div in return it will also see in real-dom. so hide that thing there is two way first use fragment that provide by react or use empty open and close tag of html
 
 import {fragment} from react
 
@@ -45,10 +45,10 @@ return (
 //
 
 
-2. to change update in realdom and virtual dom we user useState to create variable to let know react what to change in doms
+2. to change update in real-dom and virtual dom we user useState to create variable to let know react what to change in doms
 import {useState} from react;
 
-3. we can not pass parameter function direct in react onlick or kind of method in react so we wrapper it in another non parameter function to use in onlick with parameter
+3. we can not pass parameter function direct in react onClick or kind of method in react so we wrapper it in another non parameter function to use in onClick with parameter
 
 we use fat arrow function in react all time until unless we need 
 
@@ -59,17 +59,17 @@ we use fat arrow function in react all time until unless we need
 ////////----- Day 3 -----\\\\\\\\
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. two way binding:- to save user/clint data in view/browser and change with react we first tell d react first that user click something then react save in usestate and then transfer to view/browser.
+1. two way binding:- to save user/clint data in view/browser and change with react we first tell d react first that user click something then react save in useState and then transfer to view/browser.
 this method only use for forms
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ////////----- Day 4 -----\\\\\\\\
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-to install tailwind in react that created using vite 
+to install tailwind in react that created using Vite 
 1. go to tailwind css website 
 2. then click on get start button
 3. under the installation click on option frameworks guide
-4. click on vite and follow the instruction of 'using react'
+4. click on Vite and follow the instruction of 'using react'
 
 
 --- react ----
@@ -89,11 +89,11 @@ we can not push data in useState by using push method so we create another norma
 ////////----- Day 5 -----\\\\\\\\
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-today we use localstorage to store data that not going to delete until you delete it.
+today we use localStorage to store data that not going to delete until you delete it.
 
 open in browser
 press clt + shift + i to open console window
-then got to application section under that you will find localstorage
+then got to application section under that you will find localStorage
 
 localStorage.setItem('key', 'here pass the data');
 localStorage.getItem('key')// to get user pass the key
@@ -125,7 +125,7 @@ there is another way to implement class
 3. external 
 and more
 
-1. Inline :- first is to add style tags and apply css properties in writing in camelcase style. we have use two curly brackets to apply css properties 
+1. Inline :- first is to add style tags and apply css properties in writing in camelCase style. we have use two curly brackets to apply css properties 
 Ex:- <h1 style={{backgroundColor: "red", color:"yellow"}}></h1>
 
 2. Internal :- to apply internal css we create a object that contain css properties and pass in style tag of that element that we want to apply css
@@ -144,7 +144,7 @@ Ex:-
     )
   }
 
-3. External :- there is problem with external css if we apply that css this will effect all the components that present(child, grand-child, parent). this apply globly
+3. External :- there is problem with external css if we apply that css this will effect all the components that present(child, grand-child, parent). this apply globally
 
 that why we use Name.module.css to import septate css style
 
