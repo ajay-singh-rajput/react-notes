@@ -5,7 +5,7 @@
 
 let a = 5;
 export default a;
-// default export only export one veriable
+// default export only export one variable
 
 
 // to access the export in other element
@@ -18,12 +18,12 @@ export const c;
 // const export:- 
 // to access the export in other element
 import {b, c} from('path')
-// we have to use same name to eccess element
-// to export more than one varaible we use const export
+// we have to use same name to access element
+// to export more than one variable we use const export
 --------------------------------------------------------------------------------
 rafce
 
-es7+ react/reduc/
+es7+ react/reduce/
 
 --------------------------------------------------------------------------------
 
@@ -45,12 +45,12 @@ return (
 //
 
 
-2. to change update in realdom and virtual dom we user useState to create varaible to let know react what to change in doms
+2. to change update in realdom and virtual dom we user useState to create variable to let know react what to change in doms
 import {useState} from react;
 
-3. we can not pass paramenter function direct in react onlick or kind of method in react so we warapper it in another non paramenter function to use in onlick with paramiter
+3. we can not pass parameter function direct in react onlick or kind of method in react so we wrapper it in another non parameter function to use in onlick with parameter
 
-we use fat arraow function in react all time untile unless we need 
+we use fat arrow function in react all time until unless we need 
 
 
 --------------------------------------------------------------------------------
@@ -59,16 +59,16 @@ we use fat arraow function in react all time untile unless we need
 ////////----- Day 3 -----\\\\\\\\
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. two way binding:- to save user/clint data in view/browser and change with react we first tell d react first that user click something then react save in usestate and then tranfer to view/browser.
+1. two way binding:- to save user/clint data in view/browser and change with react we first tell d react first that user click something then react save in usestate and then transfer to view/browser.
 this method only use for forms
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ////////----- Day 4 -----\\\\\\\\
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-to intall tailwind in react that created using vite 
+to install tailwind in react that created using vite 
 1. go to tailwind css website 
 2. then click on get start button
-3. under the installation click on option framworks guide
+3. under the installation click on option frameworks guide
 4. click on vite and follow the instruction of 'using react'
 
 
@@ -78,11 +78,11 @@ now search the properties and apply using class in that element
 
 jsx file of react can render array by default but it can not render object and throw error. so we can not direct pass json or object data to jsx 
 
-so we use map method insted of forEach loop to render data of json 
+so we use map method instead of forEach loop to render data of json 
 
-when we use react throw one error that every item should have uniqe key properties so react know that are diffrent and not copy of each other so we pass index from map aswell so react know the diffrence in them  
+when we use react throw one error that every item should have uniq key properties so react know that are different and not copy of each other so we pass index from map as well so react know the difference in them  
 
-we can not push data in useState by using push method so we create another noraml array and copy that array in new array using [...oldArray] this  called spread operator and them we push new data to new array and then pass threw useState and replace old array with new array
+we can not push data in useState by using push method so we create another normal array and copy that array in new array using [...oldArray] this  called spread operator and them we push new data to new array and then pass threw useState and replace old array with new array
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -92,7 +92,7 @@ we can not push data in useState by using push method so we create another noram
 today we use localstorage to store data that not going to delete until you delete it.
 
 open in browser
-press clt + shift + i to open concole window
+press clt + shift + i to open console window
 then got to application section under that you will find localstorage
 
 localStorage.setItem('key', 'here pass the data');
@@ -101,16 +101,16 @@ localStorage.getItem('key')// to get user pass the key
 we use react tostify to give alert msg 
 npm install --save react-toastify
 
-if brake properties/atribute, there is problem to store data in react because data can be tranfer from parent to child 
+if brake properties/attribute, there is problem to store data in react because data can be transfer from parent to child 
 
 create components folder inside src folder 
 create two files
 1. Create.jsx 
 2. Show.jsx 
 
-import boiler plat and the paste code according create and show data in difrent file according there name 
+import boiler plat and the paste code according create and show data in different file according there name 
 
-to share comman data in both created file we pass data as argument and access as parameter in those file
+to share common data in both created file we pass data as argument and access as parameter in those file
 
 
 
@@ -118,17 +118,17 @@ to share comman data in both created file we pass data as argument and access as
 ////////----- Day 6 -----\\\\\\\\
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-there is another way to impliment class
+there is another way to implement class
 
 1. inline
 2. internal
-3. extranal 
+3. external 
 and more
 
-1. Inline :- fisrt is to add style tage and apply css properties in writing in camelcase style. we have use two curly brackets to apply css properties 
+1. Inline :- first is to add style tags and apply css properties in writing in camelcase style. we have use two curly brackets to apply css properties 
 Ex:- <h1 style={{backgroundColor: "red", color:"yellow"}}></h1>
 
-2. Internal :- to apply internal css we create a object that contain css properties and pass in style tag of that eliment that we want to apply css
+2. Internal :- to apply internal css we create a object that contain css properties and pass in style tag of that element that we want to apply css
 Ex:- 
 --other code
   const App = ()=>{
@@ -144,9 +144,9 @@ Ex:-
     )
   }
 
-3. Extranal :- there is problem with extranal css if we apply that css this will effect all the components that present(child, grand-child, parent). this apply globly
+3. External :- there is problem with external css if we apply that css this will effect all the components that present(child, grand-child, parent). this apply globly
 
-that why we use Name.module.css to import seprate css style
+that why we use Name.module.css to import septate css style
 
 //---------
  to create route in react we have to install 
@@ -154,6 +154,6 @@ that why we use Name.module.css to import seprate css style
  npm i react-router-dom
 
  and then in main.jsx file. wrapped element in BrowserRouter element 
- for going in diffrent route we use <LINK to="/"> </LINK> tag insted of <a></a> tag
+ for going in different route we use <LINK to="/"> </LINK> tag instead of <a></a> tag
 
  and we add <Router></Router> tag and define that route should we open in that route in <Rout path='/' element={<PageTag/>}/> tag
