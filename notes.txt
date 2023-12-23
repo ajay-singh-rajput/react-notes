@@ -98,7 +98,7 @@ then got to application section under that you will find localStorage
 localStorage.setItem('key', 'here pass the data');
 localStorage.getItem('key')// to get user pass the key
 
-we use react tostify to give alert msg 
+we use react toastify to give alert msg 
 npm install --save react-toastify
 
 if brake properties/attribute, there is problem to store data in react because data can be transfer from parent to child 
@@ -157,3 +157,60 @@ that why we use Name.module.css to import septate css style
  for going in different route we use <LINK to="/"> </LINK> tag instead of <a></a> tag
 
  and we add <Router></Router> tag and define that route should we open in that route in <Rout path='/' element={<PageTag/>}/> tag
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+////////----- Day 7 -----\\\\\\\\
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To check which is tag is open of navbar we use NavLink.
+NavLink provide that witch tag is active or opened in navbar. There is two method to check.
+1. we apply a function in style attribute that element and pass a parameter that return the value in "parameter.isActive".
+Ex:- <NavLink
+                style={(e) => {
+                    return {
+                        color: e.isActive ? "tomato" : "",
+                        fontWeight: e.isActive ? "bold" : "",
+                    };
+                }}
+                to="/"
+            >
+                Home
+      </NavLink>
+
+2. we pass same function in className attribute and return value in array
+Ex:- <NavLink
+                className={(e) => {
+                    return [
+                        e.isActive ? "text-red-300" : "",
+                        e.isActive ? "font-bold" : "",
+                    ].join(" ");
+                }}
+                to="/create"
+            >
+                Create
+            </NavLink>
+
+--------------------------------------------------------------
+**if we want to programmatically to open new page/link after completing task then we use "useNavigate". 
+
+Ex:- const navigate = useNavigate();
+const anyTask = ()=>{
+  // task code 
+  navigate("/address");
+}
+
+// if we pass -1/+1 or any value mean we want that much page back/forward.
+
+
+--------------------------------------------------------------
+dynamic routing:- 
+<Route path="/show/details/:title" element={<Details />} />
+
+we use useParams to access params data in new open page.
+
+--------------------------------------------------------------
+there is problem to share data in react we can only share data parent to child but we can not share data from child to parent.
+Context API(single source):- We use Context API to share data from any route by doing data centralized.
+
+Redux API (Multiple source):- it is also same but it can handle multiple data in easy way rather then Context API.

@@ -4,6 +4,7 @@ import { toast } from 'react-toastify';
 import Create from "./components/create";
 import Show from "./components/show";
 import Home from "./components/Home";
+import Nav from "./components/Nav";
 import css from "./App.module.css";
 import { Link, Route, Routes } from "react-router-dom";
 
@@ -19,11 +20,7 @@ const App = () => {
     <>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css" rel="stylesheet"></link>
     <div className="w-screen h-screen flex py-3 flex-col items-center justify-middle bg-red-100">
-    <nav className='flex justify-center gap-10 text-xl px-3'>
-      <Link to="/">Home</Link>
-      <Link to="/create">create</Link>
-      <Link to="/profile">profile</Link>
-    </nav>
+    <Nav/>
       
       <Routes>
         <Route path='/' element={<Home/>}/>
