@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const create = (props) => {
+
+ const navigate = useNavigate()
     const {users, setusers} = props
     const [username, setusername] = useState('');
     const [password, setpassword] = useState('');
@@ -18,6 +21,7 @@ const sumbitHandler = (e)=>{
       toast.success('user created')
       setusername('');
       setpassword('')
+      navigate('/profile')
     }
     
   }

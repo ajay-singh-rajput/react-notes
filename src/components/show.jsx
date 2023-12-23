@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link, Outlet  } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const show = (props) => {
@@ -16,12 +17,17 @@ const deleteHandler = (ind)=>{
    const newcss = "flex justify-between p-2 my-2 bg-slate-300 rounded-sm w-[300px]"
    
   return (
+    <>
     <ol className="list-disc">
       {users.map((user, index)=>{
-        return <li key={index} className={newcss}><p>{user.username}</p> <span className="flex gap-2"><i className="ri-pencil-line"></i><i className="ri-delete-bin-line" onClick={deleteHandler}></i></span></li>
+        return <li key={index} className={newcss}><Link to={`/profile/details/${user.username}`}><p>{user.username}</p> </Link><span className="flex gap-2"><i className="ri-pencil-line"></i><i className="ri-delete-bin-line" onClick={deleteHandler}></i></span></li>
       }).reverse()}
       
     </ol>
+    <div className="w-[80%]">
+                <Outlet />
+            </div>
+      </>
   )
 }
 

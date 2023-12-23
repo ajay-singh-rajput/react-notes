@@ -5,6 +5,7 @@ import Create from "./components/create";
 import Show from "./components/show";
 import Home from "./components/Home";
 import Nav from "./components/Nav";
+import Details from "./components/Details";
 import css from "./App.module.css";
 import { Link, Route, Routes } from "react-router-dom";
 
@@ -25,7 +26,15 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/create' element={<Create users={users} setusers={setusers}/>}/>
-        <Route path='/profile' element={<Show users={users} setusers={setusers}/>}/>
+
+
+        <Route path='/profile' element={<Show users={users} setusers={setusers}/>}>
+
+        <Route path="/profile/details/:title" element={<Details />} />
+        </Route>
+
+        {/* <Route path='/details/:title' element={<Details/>}/> */}
+
       </Routes>
     
     
