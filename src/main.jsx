@@ -5,13 +5,17 @@ import './index.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { BrowserRouter } from 'react-router-dom';
+import Context from './utils/Context.jsx';
 
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 <div>
+    <Context>
+
     <BrowserRouter>
 <App />
 <ToastContainer/>
 </BrowserRouter>
+    </Context>
 </div>)

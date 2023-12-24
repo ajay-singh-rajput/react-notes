@@ -8,6 +8,7 @@ import Nav from "./components/Nav";
 import Details from "./components/Details";
 import css from "./App.module.css";
 import { Link, Route, Routes } from "react-router-dom";
+import Edit from './components/Edit';
 
 
 
@@ -33,7 +34,7 @@ const App = () => {
         <Route path="/profile/details/:title" element={<Details />} />
         </Route>
 
-        {/* <Route path='/details/:title' element={<Details/>}/> */}
+        <Route path='/profile/edit/:title' element={<Edit/>}/>
 
       </Routes>
     

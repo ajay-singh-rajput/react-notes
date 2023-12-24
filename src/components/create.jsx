@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { UserContext } from "../utils/Context";
 
-const create = (props) => {
+const create = () => {
+
+
+  const [users, setusers] = useContext(UserContext)
 
  const navigate = useNavigate()
-    const {users, setusers} = props
+    // const {users, setusers} = props
     const [username, setusername] = useState('');
     const [password, setpassword] = useState('');
 const sumbitHandler = (e)=>{

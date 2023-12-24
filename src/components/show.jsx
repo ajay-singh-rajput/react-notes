@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, Outlet  } from "react-router-dom";
 import { toast } from "react-toastify";
+import { UserContext } from "../utils/Context";
 
-const show = (props) => {
-    const {users, setusers} = props
+const show = () => {
+  const [users, setusers] = useContext(UserContext)
+    // const {users, setusers} = props
     
 const deleteHandler = (ind)=>{
     const user = [...users]
@@ -20,7 +22,7 @@ const deleteHandler = (ind)=>{
     <>
     <ol className="list-disc">
       {users.map((user, index)=>{
-        return <li key={index} className={newcss}><Link to={`/profile/details/${user.username}`}><p>{user.username}</p> </Link><span className="flex gap-2"><i className="ri-pencil-line"></i><i className="ri-delete-bin-line" onClick={deleteHandler}></i></span></li>
+        return <li key={index} className={newcss}><Link to={`/profile/details/${user.username}`}><p>{user.username}</p> </Link><span className="flex gap-2"><Link to={`/profile/edit/${user.username}`}><i className="ri-pencil-line"></i></Link><i className="ri-delete-bin-line" onClick={()=>{deleteHandler(index)}}></i></span></li>
       }).reverse()}
       
     </ol>

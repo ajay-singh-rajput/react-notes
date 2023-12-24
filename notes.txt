@@ -213,4 +213,9 @@ we use useParams to access params data in new open page.
 there is problem to share data in react we can only share data parent to child but we can not share data from child to parent.
 Context API(single source):- We use Context API to share data from any route by doing data centralized.
 
-Redux API (Multiple source):- it is also same but it can handle multiple data in easy way rather then Context API.
+Redux Tool kit (Multiple source):- it is also same but it can handle multiple data in easy way rather then Context API.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+////////----- Day 8 -----\\\\\\\\
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
