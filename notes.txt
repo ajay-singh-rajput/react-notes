@@ -257,3 +257,18 @@ useEffect(() => {
 },[])
 
 // if we want that react doest not load all the components again and again and only load those components who is changed so we pass [] brackets in last of useEffect.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+////////----- Day 9 -----\\\\\\\\
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+open redux toolkit website and follow steps.
+
+Install Redux Toolkit and React-Redux
+npm install @reduxjs/toolkit react-redux
+
+
+Create a Redux Store
+Provide the Redux Store to React
+Create a Redux State Slice
+Add Slice Reducers to the Store
+Use Redux State and Actions in React Components
