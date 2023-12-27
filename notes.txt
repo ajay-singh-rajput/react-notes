@@ -60,7 +60,7 @@ we use fat arrow function in react all time until unless we need
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. two way binding:- to save user/clint data in view/browser and change with react we first tell d react first that user click something then react save in useState and then transfer to view/browser.
-this method only use for forms
+this method only use for forms.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ////////----- Day 4 -----\\\\\\\\
@@ -182,7 +182,7 @@ Ex:- <NavLink
 Ex:- <NavLink
                 className={(e) => {
                     return [
-                        e.isActive ? "text-red-300" : "",
+                        e.isActive ? "text-red-300 " : "",
                         e.isActive ? "font-bold" : "",
                     ].join(" ");
                 }}
@@ -219,3 +219,41 @@ Redux Tool kit (Multiple source):- it is also same but it can handle multiple da
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ////////----- Day 8 -----\\\\\\\\
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+there is three cycle method in react creation(Mounting), deletion(Unmounting) and updation(updating). 
+
+if we want to load data when we open or without clicking a button so we use useEffect for that.
+useEffect :- UseEffect is a React Hook that allows developers to manage side effects and state changes in functional components. This includes: 
+Fetching data from an API
+Updating the state
+Updating the DOM
+Setting up event listeners
+
+API:- to transfer/connect data between server and frontend the way we use is called api(Application Programming Interface). 
+
+Fetch:- The Fetch API is a feature that allows you to make HTTP requests to a web server. It's built into modern browsers, so you don't need additional libraries or packages to use it. 
+The fetch() method.
+
+Axios API :- Axios is a popular JavaScript library used for making HTTP requests from a web browser or Node.js. It is a promise-based library, which means that it uses promises to handle the asynchronous nature of HTTP requests. This makes it easier to write code that is both readable and maintainable.
+Axios is also very versatile. It can be used to make all sorts of HTTP requests, including GET, POST, PUT, and DELETE. It also supports a variety of data formats, including JSON, XML, and FormData.
+
+import axios from "axios";
+
+Ex:- const getproducts = async () => {
+        try {
+            const { data } = await axios.get(
+                "https://fakestoreapi.com/products"
+            );
+            setproducts(data);
+            console.log(data);
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
+this method can not be called directly so we use useEffect hook method.
+
+useEffect(() => {
+    if (!products) getproducts();
+},[])
+
+// if we want that react doest not load all the components again and again and only load those components who is changed so we pass [] brackets in last of useEffect.
