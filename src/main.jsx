@@ -6,11 +6,15 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { BrowserRouter } from 'react-router-dom';
 import Context from './utils/Context.jsx';
+import { Provider } from 'react-redux';
+import { store } from './store/store.jsx';
 
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 <div>
+    <Provider store={store}>
+
     <Context>
 
     <BrowserRouter>
@@ -18,4 +22,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 <ToastContainer/>
 </BrowserRouter>
     </Context>
+    </Provider>
 </div>)
