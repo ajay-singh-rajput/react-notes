@@ -273,3 +273,20 @@ Provide the Redux Store to React
 Create a Redux State Slice
 Add Slice Reducers to the Store
 Use Redux State and Actions in React Components
+
+
+ useDispatch:- to call action within in it and pass the value that we want manipulate.
+ useSelector:- to call data that we want to use. it is return a callback function in it and parameter state.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+////////----- Day 10 -----\\\\\\\\
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Asynchronous data calling in redux toolkit
+
+we can not use method like tryCatch/.then method those make asynchronous code to synchronous in reducer. or we can say that we can not action asynchronous.
+
+so we have to make a function out of reducers. we can make in same file or we make another file to make that function.
+
+we create a function and pass another function in it and we pass state, action as parameter of function. and we use 
+
