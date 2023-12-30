@@ -13,6 +13,8 @@ const Nav = () => {
       }}}>create</NavLink>
       <NavLink to="/profile" className={(e)=>{return e.isActive ? "text-blue-500 font-bold" :""
       }}>profile</NavLink>
+      <NavLink to="/product" className={(e)=>{return e.isActive ? "text-blue-500 font-bold" :""
+      }}>product</NavLink>
     </nav>
   )
 }

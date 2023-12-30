@@ -9,6 +9,7 @@ import Details from "./components/Details";
 import css from "./App.module.css";
 import { Link, Route, Routes } from "react-router-dom";
 import Edit from './components/Edit';
+import Product from './components/Product';
 
 
 
@@ -27,6 +28,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/create' element={<Create users={users} setusers={setusers}/>}/>
+        <Route path='/product' element={<Product users={users} setusers={setusers}/>}/>
 
 
         <Route path='/profile' element={<Show users={users} setusers={setusers}/>}>
